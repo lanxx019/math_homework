@@ -10,15 +10,11 @@ App.IndexRoute = Ember.Route.extend({
     for (var i = 0; i < 8; i++) {
       var line = [];
       for (var j = 0; j < 5; j++) {
-        const seed = 200;
+        const seed = 10;
         var item = {};
-        item.op = '+';
+        item.op = '*';
         item.first = safeRandom(seed);
         item.second = safeRandom(seed);
-        if (Math.random() < 0.5) {
-          item.op = '-';
-          item.second = safeRandom(item.first);
-        }
         line.push(item);
       }
       result.push(line);
