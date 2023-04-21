@@ -33,7 +33,16 @@
               <math xmlns="http://www.w3.org/1998/Math/MathML">
                 <mtable columnalign="right" style="border-bottom: 1px solid black; font-size: 200%">
                   <mtr><mtd></mtd><mtd><mn>{{item.first}}</mn></mtd></mtr>
-                  <mtr><mtd><mo>{{item.op}}</mo></mtd><mtd><mn>{{item.second}}</mn></mtd></mtr>
+                  <mtr>
+                    <mtd><mo>
+                      {{#if item.op}}
+                        &times;
+                      {{else}}
+                        &divide;
+                      {{/if}}
+                    </mo></mtd>
+                    <mtd><mn>{{item.second}}</mn></mtd>
+                  </mtr>
                 </mtable>
               </math>
             </td>
